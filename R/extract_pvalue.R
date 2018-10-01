@@ -1,4 +1,4 @@
-#' @title Extract p-values from a string.
+#' @title Extract p-values from a string
 #' @description Given a character string, this function will extract the p-value
 #' @param x a character string containing a p-value
 #' @param full include "p=" or just the number, Default: TRUE

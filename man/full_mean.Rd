@@ -4,12 +4,15 @@
 \alias{full_mean}
 \title{Compare two statements Mean ± SEM}
 \usage{
-full_mean(means, group)
+full_mean(means, group, comparison_string = "vs")
 }
 \arguments{
 \item{means}{character vector of means.}
 
 \item{group}{grouping column (e.g. "treatment")}
+
+\item{comparison_string}{what word/expression do you want to use to compare
+the means?, Default: "vs"}
 }
 \value{
 A string with the format "Mean ± SEM unit vs Mean ± SEM"

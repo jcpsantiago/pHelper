@@ -7,15 +7,15 @@
 extract_pvalue(x, full = TRUE)
 }
 \arguments{
-\item{x}{PARAM_DESCRIPTION}
+\item{x}{a character string containing a p-value}
 
-\item{full}{PARAM_DESCRIPTION, Default: TRUE}
+\item{full}{include "p=" or just the number, Default: TRUE}
 }
 \value{
-OUTPUT_DESCRIPTION
+a character string
 }
 \description{
-Given a character string, this function will extract
+Given a character string, this function will extract the p-value
 }
 \examples{
 \dontrun{
