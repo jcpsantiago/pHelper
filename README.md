@@ -1,7 +1,10 @@
-[![Travis](https://img.shields.io/travis/jcpsantiago/paprHelper.svg?longCache=true&style=flat-square)](https://travis-ci.org/jcpsantiago/pprHelper)
+[![Travis](https://img.shields.io/travis/jcpsantiago/paperHelper.svg?longCache=true&style=flat-square)](https://travis-ci.org/jcpsantiago/paperHelper)
+[![Coverage status](https://codecov.io/gh/jcpsantiago/paperHelper/branch/master/graph/badge.svg)](https://codecov.io/github/jcpsantiago/paperHelper?branch=master)
 ![License MIT](https://img.shields.io/badge/License-MIT-blue.svg?longCache=true&style=flat-square)
 
 
-# paprHelper
+# paperHelper
 
-Format `broom::tidy()` statistical tests into strings to automate paper writing.
+This is a collection of small helper functions I use when writing papers. Mostly
+to automate the formatting of means, comparisons, t-tests and other repetitive
+tasks.
