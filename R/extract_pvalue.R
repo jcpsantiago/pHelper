@@ -1,8 +1,8 @@
 #' @title Extract p-values from a string.
-#' @description Given a character string, this function will extract
-#' @param x PARAM_DESCRIPTION
-#' @param full PARAM_DESCRIPTION, Default: TRUE
-#' @return OUTPUT_DESCRIPTION
+#' @description Given a character string, this function will extract the p-value
+#' @param x a character string containing a p-value
+#' @param full include "p=" or just the number, Default: TRUE
+#' @return a character string
 #' @examples
 #' \dontrun{
 #' if(interactive()){
@@ -20,8 +20,8 @@ extract_pvalue <- function(x, full = TRUE){
 
   if(isTRUE(full)){
     stringr::str_extract(x,
-                         "p=0.[0-9]+ | p = 0.[0-9]+ | P = 0.[0-9]+ | p=0.[0-9]+")
+                         "(p|P)(=|\\s=\\s)0\\.[0-9]+")
   } else{
-    stringr::str_extract(extract_pvalue(x), "0.[0-9]+")
+    stringr::str_extract(extract_pvalue(x), "0\\.[0-9]+")
   }
 }
