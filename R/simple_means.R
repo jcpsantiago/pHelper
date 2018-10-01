@@ -22,6 +22,9 @@
 #' @export
 simple_mean <- function(x, digits = 2, units = NULL, na.rm = FALSE){
 
+  if(!is.numeric(x))
+    stop("Please provide a numeric vector!")
+  
   if(length(digits) > 1){
     digits <- digits[1]
     warning("Using only digits[1]")

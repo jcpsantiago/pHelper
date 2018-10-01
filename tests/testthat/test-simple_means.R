@@ -7,6 +7,10 @@ df <- iris %>%
                 digits = 2,
                 moredigits = 0)
 
+test_that("fail when the provided vector is not numeric", {
+  expect_error(simple_mean(c("a", "b", "c")))
+})
+
 test_that("output is a character vector", {
 
   sm <- simple_mean(x)

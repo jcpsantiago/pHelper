@@ -1,4 +1,4 @@
 library(testthat)
-library(paprHelper)
+library(paperHelper)
 
-test_check("paprHelper")
+test_check("paperHelper")

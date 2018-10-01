@@ -15,7 +15,8 @@
 #' @importFrom stringr str_extract
 extract_pvalue <- function(x, full = TRUE){
 
-  stopifnot(is.character())
+  if(!is.character(x))
+    stop("You can only extract p-values from character strings!")
 
   if(isTRUE(full)){
     stringr::str_extract(x,
