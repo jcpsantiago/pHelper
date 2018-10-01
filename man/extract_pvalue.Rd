@@ -2,7 +2,7 @@
 % Please edit documentation in R/extract_pvalue.R
 \name{extract_pvalue}
 \alias{extract_pvalue}
-\title{Extract p-values from a string.}
+\title{Extract p-values from a string}
 \usage{
 extract_pvalue(x, full = TRUE)
 }

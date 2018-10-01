@@ -20,34 +20,37 @@
 #' }
 #' @rdname simple_mean
 #' @export
-simple_mean <- function(x, digits = 2, units = NULL, na.rm = FALSE){
-
-  if(!is.numeric(x))
+simple_mean <- function(x, digits = 2, units = "", na.rm = FALSE) {
+  if (!is.numeric(x)) {
     stop("Please provide a numeric vector!")
-  
-  if(length(digits) > 1){
+  }
+
+  if (length(digits) > 1) {
     digits <- digits[1]
     warning("Using only digits[1]")
   }
 
-  if(isTRUE(na.rm)){
-    smf <- function(x, digits){
-      paste(signif(mean(x, na.rm = TRUE), digits),
-            "\u00b1",
-            signif(sqrt(stats::var(x, na.rm = TRUE)/length(stats::na.omit(x))),
-                   digits))
-    }
-  } else{
-    smf <- function(x, digits){
-      paste(signif(mean(x), digits),
-            "\u00b1",
-            signif(sqrt(stats::var(x)/length(x)), digits))
-    }
+  if (!is.character(units)) {
+    stop("Please provide units as a character vector.")
   }
 
-  if(is.null(units)){
-    smf(x, digits)
-  } else{
-    paste(smf(x, digits), units[1])
+  if (isTRUE(na.rm)) {
+    sim_mean <- paste(
+      signif(mean(x, na.rm = TRUE), digits),
+      "\u00b1",
+      signif(
+        sqrt(stats::var(x, na.rm = TRUE) / length(stats::na.omit(x))),
+        digits
+      ), units
+    )
+  } else {
+    sim_mean <- paste(
+      signif(mean(x), digits),
+      "\u00b1",
+      signif(sqrt(stats::var(x) / length(x)), digits), units
+    )
   }
+  
+  ## trim white space, in case no units are given
+  stringr::str_trim(sim_mean, "right")
 }

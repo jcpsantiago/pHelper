@@ -4,7 +4,7 @@
 \alias{simple_mean}
 \title{Mean ± SEM}
 \usage{
-simple_mean(x, digits = 2, units = NULL, na.rm = FALSE)
+simple_mean(x, digits = 2, units = "", na.rm = FALSE)
 }
 \arguments{
 \item{x}{numeric vector.}
