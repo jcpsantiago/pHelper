@@ -14,6 +14,9 @@ test_that("fail when the provided vector is not numeric", {
   expect_error(simple_mean(c("a", "b", "c")))
 })
 
+test_that("units are given as a character vector", {
+  expect_error(simple_mean(x, units = c(2, 4)))
+})
 
 test_that("output is a character vector", {
   sm <- simple_mean(x)
