@@ -22,7 +22,7 @@ print_ttest <- function(tidy_ttest, digits = 2, ci = TRUE, ptype = "full"){
   ## set correct type of p-value to present
   if(ptype == "cutoff"){
     pvalue <- dplyr::case_when(
-      tidy_ttest$p.value < 0.01 ~ "<0.01",
+      tidy_ttest$p.value < 0.01 & tidy_ttest$p.value > 0.001 ~ "<0.01",
       tidy_ttest$p.value < 0.001 ~ "<0.001",
       TRUE ~ paste0("=", signif(tidy_ttest$p.value, digits))
     )

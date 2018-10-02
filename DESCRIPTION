@@ -1,6 +1,6 @@
 Package: paperHelper
 Version: 0.0.0.9000
-Title: Make Writing Papers With Rmarkdown Easier.
+Title: Make Writing Papers With Rmarkdown Easier
 Description: Quick functions to format means, t-tests and other common analyses.
 Authors@R: person("Joao", "Santiago", , "joao.santiago@uni-tuebingen.de", c("aut", "cre"))
 License: MIT + file LICENSE

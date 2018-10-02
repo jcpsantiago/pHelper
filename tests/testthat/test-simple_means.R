@@ -1,15 +1,13 @@
 context("test-print_sim_means.R")
-require(dplyr)
 
 set.seed(1234)
 x <- rnorm(50 + rnorm(50))
 x_mis <- x
 x_mis[1] <- NA
 
-df <- iris %>%
-  dplyr::mutate(unit = "cm",
-                digits = 2,
-                moredigits = 0)
+df <- dplyr::mutate(iris, unit = "cm",
+                          digits = 2,
+                          moredigits = 0)
 
 
 test_that("fail when the provided vector is not numeric", {
